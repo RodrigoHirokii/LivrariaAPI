@@ -1,0 +1,128 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  max-width: 900px;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #555;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+
+.form-container {
+  margin-bottom: 30px;
+}
+
+/* Estilo dos campos de texto */
+input {
+  padding: 15px;
+  font-size: 1rem;
+  margin-right: 15px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  width: 60%;  /* Aumenta a largura dos campos */
+  max-width: 400px;  /* Limita a largura máxima para não ficar muito grande */
+  box-sizing: border-box;
+}
+
+/* Botão de ação */
+button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#bibliotecasLista ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#bibliotecasLista li {
+  background-color: #f9f9f9;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.excluir-button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.excluir-button:hover {
+  background-color: #c82333;
+}
+
+#bibliotecasLista li.no-result {
+  color: #ff6347;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+      width: 90%;
+      padding: 20px;
+  }
+
+  input {
+      width: 80%;  /* Mais largo para telas pequenas */
+  }
+
+  button {
+      width: 80%;  /* Também aumenta o tamanho do botão em telas pequenas */
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  h2 {
+      font-size: 1.3rem;
+  }
+}

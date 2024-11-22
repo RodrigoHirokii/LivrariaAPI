@@ -1,0 +1,15 @@
+CREATE TABLE biblioteca_steam (
+    id UUID NOT NULL PRIMARY KEY,
+    data_cadastro TIMESTAMP,
+    data_atualizacao TIMESTAMP,
+    id_usuario UUID
+);
+
+CREATE TABLE jogos_steam (
+    id UUID NOT NULL PRIMARY KEY,
+    nome_jogo VARCHAR(155) NOT NULL,
+    data_cadastro TIMESTAMP,
+    data_atualizacao TIMESTAMP,
+    biblioteca_id UUID NOT NULL, -- Chave estrangeira mais clara
+    CONSTRAINT fk_biblioteca FOREIGN KEY (biblioteca_id) REFERENCES biblioteca_steam(id)
+);
